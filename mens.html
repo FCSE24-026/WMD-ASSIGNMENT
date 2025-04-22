@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name ="viewport" content="width=device-width, intial-scale=1.0" />
+        <title>men's collection</title>
+        <link href ="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+
+         <!-- Header -->
+         <header>
+          <div class="container">
+            <!-- Centered Logo -->
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">LOGO</a></div>
+      
+            <!-- Header Row with Icons and Navigation -->
+            <div class="header-row">
+              <!-- Left Social Icons -->
+              <div class="left-icons">
+                <a href="#"><img src="assets/instagram-icon.png" alt="Instagram" class="icon" /></a>
+                <a href="#"><img src="assets/twitter-icon.png" alt="Twitter" class="icon" /></a>
+              </div>
+      
+              <!-- Center Navigation -->
+              <nav class="main-nav">
+                <a href="mens.html">MEN</a>
+                <a href="women's.html">WOMEN</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="#">PROFILE</a>
+              </nav>
+      
+              <!-- Right Utility Icons -->
+              <div class="right-icons">
+                <a href="#"><img src="assets/login-icon.svg" alt="Login" class="icon login-trigger" /></a>
+                <a href="#"><img src="assets/cart-icon.png" alt="Cart" class="icon cart-trigger" /></a>
+              </div>
+            </div>
+          </div>
+        </header>
+
+      <!-- Women's Section with 8 Product Blocks -->
+      <section class="mens-products container">
+        <h2>Men's Collection</h2>
+        <div class="product-grid">
+          <div class="product-card"></div>
+          <div class="product-card"></div>
+          <div class="product-card"></div>
+          <div class="product-card"></div>
+          <div class="product-card"></div>
+          <div class="product-card"></div>
+          <div class="product-card"></div>
+          <div class="product-card"></div>
+        </div>
+      </section>
+
+       <!-- Footer -->
+        <footer>
+          <div class=" footer container">
+            <h1>FOOTER</h1>
+            <p>© 2025 Your Company. All rights reserved.</p>
+          </div>
+        </footer>
+        <!-- === Drawers + Overlay === -->
+
+        <!-- Register Drawer -->
+        <div id="register-drawer" class="register-drawer hidden">
+          <div class="drawer-header">
+            <h2>REGISTER</h2>
+            <button id="close-drawer">&times;</button>
+          </div>
+          <form id="register-form">
+            <label>Full Name</label>
+            <input type="text" placeholder="Your full name" required />
+            <label>Email Address</label>
+            <input type="email" placeholder="example@mail.com" required />
+            <label>Password</label>
+            <input type="password" placeholder="••••••••" required />
+            <label>Cellphone</label>
+            <input type="tel" placeholder="(+267)..." required />
+            <label class="terms">
+              <input type="checkbox" required />
+              I agree to terms and conditions
+            </label>
+            <button type="submit" class="btn">REGISTER</button>
+          </form>
+        </div>
+
+        <!-- Login Drawer -->
+        <div id="login-drawer" class="login-drawer hidden">
+          <div class="drawer-header">
+            <h2>LOGIN</h2>
+            <button id="close-login">&times;</button>
+          </div>
+          <form id="login-form">
+            <label>Email Address</label>
+            <input type="email" placeholder="example@mail.com" required />
+            <label>Password</label>
+            <input type="password" placeholder="••••••••" required />
+            <p>Don't have an account? <a href="#" id="open-register">Register</a></p>
+            <button type="submit" class="btn">LOGIN</button>
+          </form>
+        </div>
+
+        <!-- Cart Drawer -->
+        <div id="cart-drawer" class="cart-drawer hidden">
+          <div class="drawer-header">
+            <h2>Your Cart</h2>
+            <button id="close-cart">&times;</button>
+          </div>
+          <div id="cart-content">
+            <p>Please log in to view your cart.</p>
+          </div>
+        </div>
+
+
+        <!-- Shared Overlay -->
+        <div id="overlay" class="overlay hidden"></div>
+  
+  </body>
+</html>

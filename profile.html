@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="profile.css" />
+    <script src="script.js" defer></script>
+    <script src="profile.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">LOGO</a></div>
+            <div class="header-row">
+                <div class="left-icons">
+                    <a href="#"><img src="assets/instagram-icon.png" alt="Instagram social media link" class="icon" /></a>
+                    <a href="#"><img src="assets/twitter-icon.png" alt="Twitter social media link" class="icon" /></a>
+                </div>
+                <nav class="main-nav">
+                    <a href="mens.html">MEN</a>
+                    <a href="women's.html">WOMEN</a>
+                    <a href="contact.html">CONTACT</a>
+                </nav>
+                <div class="right-icons">
+                    <button class="notification-trigger"><img src="assets/notification-icon.png" alt="Notifications" class="icon" /></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container profile-page">
+        <aside class="sidebar" aria-label="User Dashboard Navigation">
+            <div class="sidebar-header">Users</div>
+            <ul class="sidebar-menu" role="navigation">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" aria-expanded="false" aria-controls="dashboard-menu">Dashboard</a>
+                    <ul class="dropdown-menu" id="dashboard-menu">
+                        <li><a href="#orders-info" data-target="orders-info">Orders</a></li>
+                        <li><a href="#cart-info" data-target="cart-info">Cart</a></li>
+                    </ul>
+                </li>
+                <li class="active"><a href="#profile-info" data-target="profile-info">Profile</a></li>
+                <li><a href="#accounts-info" data-target="accounts-info">Account</a></li>
+                <li><a href="#settings-section" data-target="settings-section">Settings</a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+
+            <div class="content-wrapper">
+                <section id="profile-info" class="content-section active">
+                    <h2>Profile Information</h2>
+                    <p>User profile details will be loaded from the backend.</p>
+                    </section>
+
+                <section id="accounts-info" class="content-section">
+                    <h2>Account Information</h2>
+                    <p>Account management options will be loaded from the backend.</p>
+                    <button class="delete-account-btn">Delete Account</button>
+                </section>
+
+                <section id="settings-section" class="content-section">
+                    <h2>Settings</h2>
+                    <p>User settings and preferences will be loaded from the backend.</p>
+                </section>
+
+                <section id="orders-info" class="content-section">
+                    <h2>Orders</h2>
+                    <p>Order history will be loaded from the backend.</p>
+                </section>
+
+                <section id="cart-info" class="content-section">
+                    <h2>Cart</h2>
+                    <p>Items in the user's cart will be loaded from the backend.</p>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer container">
+            <h1>FOOTER</h1>
+            <p>© 2025 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="notification-drawer" class="notification-drawer hidden">
+        <div class="drawer-header">
+            <h2>Notifications</h2>
+            <button id="close-notification">&times;</button>
+        </div>
+        <div id="notification-content">
+            <p>No new notifications.</p>
+            </div>
+    </div>
+
+    <div id="overlay" class="overlay hidden"></div>
+
+</body>
+</html>

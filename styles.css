@@ -1,0 +1,676 @@
+/* Font and Global */
+body {
+  font-family: 'Inria Serif', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Header Styles */
+header {
+  background-color: #f5f5f5;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* LOGO centered at the top */
+/* Updated Logo Style */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Header row with nav and icons */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left icons (social) */
+.left-icons,
+.right-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Center nav */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.main-nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #000;
+}
+
+/* Banner Styles */
+.banner {
+  width: 100%;
+  height: 400px;
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px; /* Increased font size */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+.mens-products h2,
+.women-products h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: 'Inria Serif', serif;
+}
+.product-card {
+  background-color: #dcdcdc;
+  width: 100%;
+  height: 250px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(184, 183, 183, 0.08);
+  transition: transform 0.3s ease;
+}
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  background-color: #d3d3d3;
+  border: 1px solid #d3d3d3; 
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* === DRAWERS AND OVERLAY === */
+
+/* Shared Drawer Base */
+.login-drawer,
+.register-drawer,
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -33.33%;
+  width: 33.33%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1001;
+  transition: right 0.4s ease;
+  padding: 40px 30px;
+  overflow-y: auto;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.login-drawer.open,
+.register-drawer.open,
+.cart-drawer.open {
+  right: 0 !important;
+  background: white !important;
+  color: black !important;
+  display: block !important;
+  z-index: 999999 !important;
+  font-size: 18px !important;
+  border-left: 3px solid rgb(0, 0, 0) !important;
+  padding: 40px !important;
+}
+
+/* Show drawer */
+.login-drawer.open,
+.register-drawer.open,
+.cart-drawer.open {
+  right: 0;
+}
+
+/* Drawer header */
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.drawer-header h2 {
+  font-size: 26px;
+}
+
+.drawer-header button {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Form inside register drawer */
+#login-form,
+#register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#login-form input[type="email"],
+#login-form input[type="password"],
+#register-form input[type="text"],
+#register-form input[type="email"],
+#register-form input[type="password"],
+#register-form input[type="tel"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+#register-form input[type="text"],
+#register-form input[type="email"],
+#register-form input[type="password"],
+#register-form input[type="tel"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#register-form .terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.btn {
+  padding: 12px;
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Overlay (dims background) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 66.66%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+
+/* Hidden by default */
+.hidden {
+  display: none;
+}
+/* === CONTACT US PAGE STYLING === */
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 30px;
+  border-top: 2px solid #000;
+  font-family: 'Inria Serif', serif;
+  color: #000;
+  background-color: #fff;
+}
+
+.contact-info, 
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.contact-info p strong {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info-item .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  vertical-align: middle; /* ✅ Aligns image to the text middle */
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: 'Inria Serif', serif;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: rgb(155, 153, 153);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Inria Serif', serif;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #333;
+}
+
+/* profile.css */
+
+/* Responsive adjustments if needed */
+@media (max-width: 768px) {
+  .profile-page {
+      flex-direction: column;
+  }
+  .sidebar {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+}
+/* profile.css */
+
+/* Existing styles remain the same */
+
+.profile-page {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.sidebar-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 5px; /* Reduced margin for dropdown items */
+}
+
+.sidebar-menu li > a { /* Style for top-level links and dropdown toggler */
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #555;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-menu li > a:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+.sidebar-menu li.active > a {
+  background-color: #e0e0e0;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Dropdown styles */
+.dropdown-toggle::after {
+  content: '\25BE'; /* Down arrow */
+  float: right;
+  margin-top: 3px;
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin-left: 15px;
+  display: none; /* Initially hidden */
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #777;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+.dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  position: relative; /* For absolute positioning of content sections */
+  overflow: hidden; /* To hide content that slides in */
+}
+
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.users-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin: 0;
+}
+
+
+
+.content-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto; /* Adjust as needed */
+}
+
+.content-section {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Initially hidden to the right */
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  padding: 20px;
+  background-color: #fff; /* Match main content background */
+}
+
+.content-section.active {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Basic styling for content sections */
+.content-section h2 {
+  font-size: 1.75rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.delete-account-btn {
+  background-color: #7d7c7c; /* Example danger color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.delete-account-btn:hover {
+  background-color: #7d7c7c;
+  transform: translateY(-1px);
+}
+
+
+/* Header notification icon */
+.notification-trigger {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.notification-trigger .icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Notification Drawer Styles */
+.notification-drawer {
+  position: fixed;
+  top: 0;
+  right: -33.33%;
+  width: 33.33%;
+  height: 100vh;
+  background-color: #fff;
+  z-index: 1002; /* Higher than overlay */
+  transition: right 0.4s ease;
+  padding: 40px 30px;
+  overflow-y: auto;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.notification-drawer.open {
+  right: 0 !important;
+}
+
+.notification-drawer .drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.notification-drawer .drawer-header h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.notification-drawer .drawer-header button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#notification-content {
+  /* Styles for notification items will go here */
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  display: none; /* Hidden by default, toggled by JS */
+}
+
+.hidden {
+  display: none;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inria Serif', serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+.nav-desktop {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-desktop a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+}
+
+.side-drawer {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.side-drawer.open {
+  left: 0;
+}
+
+.side-drawer button {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Responsive product grid */
+.content {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+
+
+/*login-drawr styling */
+
+
+/* Footer */
+.footer {
+  background-color: #c5c5c8;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 12px;
+}
+
