@@ -164,15 +164,3 @@ document.addEventListener('DOMContentLoaded', function() {
       showSection(initialActiveLink.getAttribute('data-target'));
   }
 });
-
-const menuBtn = document.getElementById('menu-btn');
-const sideDrawer = document.getElementById('side-drawer');
-const closeDrawer = document.getElementById('close-drawer');
-
-menuBtn.addEventListener('click', () => {
-  sideDrawer.classList.add('open');
-});
-
-closeDrawer.addEventListener('click', () => {
-  sideDrawer.classList.remove('open');
-});

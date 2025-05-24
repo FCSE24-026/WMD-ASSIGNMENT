@@ -290,13 +290,6 @@ header {
   margin-bottom: 5px;
 }
 
-.info-item .icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  flex-shrink: 0;
-  vertical-align: middle; /* ✅ Aligns image to the text middle */
-}
 .contact-form form {
   display: flex;
   flex-direction: column;
@@ -455,7 +448,20 @@ header {
   margin: 0;
 }
 
+.add-users-btn {
+  background-color: #6c63ff; /* Example primary color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
 
+.add-users-btn:hover {
+  background-color: #5a52e0;
+}
 
 .content-wrapper {
   position: relative;
@@ -490,7 +496,7 @@ header {
 }
 
 .delete-account-btn {
-  background-color: #7d7c7c; /* Example danger color */
+  background-color: #f28b96; /* Example danger color */
   color: white;
   border: none;
   padding: 10px 15px;
@@ -498,15 +504,11 @@ header {
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.2s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 
 .delete-account-btn:hover {
-  background-color: #7d7c7c;
-  transform: translateY(-1px);
+  background-color: #f27581;
 }
-
 
 /* Header notification icon */
 .notification-trigger {
@@ -577,88 +579,6 @@ header {
 
 .hidden {
   display: none;
-}
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inria Serif', serif;
-  margin: 0;
-  padding: 0;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background: #fff;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-  position: relative;
-  z-index: 1000;
-}
-
-.nav-desktop {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-desktop a {
-  text-decoration: none;
-  color: #333;
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-}
-
-.side-drawer {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 250px;
-  height: 100%;
-  background: #fff;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  transition: left 0.3s ease;
-  z-index: 999;
-}
-
-.side-drawer.open {
-  left: 0;
-}
-
-.side-drawer button {
-  align-self: flex-end;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-@media (max-width: 768px) {
-  .nav-desktop {
-    display: none;
-  }
-  .menu-toggle {
-    display: block;
-  }
-}
-
-/* Responsive product grid */
-.content {
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
 }
 
 
