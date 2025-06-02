@@ -85,13 +85,14 @@ header {
   align-items: center;
   font-size: 100px; /* Increased font size */
 }
-
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 40px;
   justify-items: center;
+  padding: 20px 0;
 }
+
 .mens-products h2,
 .women-products h2 {
   font-size: 2rem;
@@ -99,14 +100,19 @@ header {
   text-align: center;
   font-family: 'Inria Serif', serif;
 }
+
 .product-card {
-  background-color: #dcdcdc;
+  background-color: #f7f7f7;
   width: 100%;
-  height: 250px;
+  max-width: 240px;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(184, 183, 183, 0.08);
+  overflow: hidden;
   transition: transform 0.3s ease;
+  text-align: center;
+  padding-bottom: 1rem;
 }
+
 .product-card:hover {
   transform: scale(1.02);
 }
@@ -114,22 +120,25 @@ header {
 .product-card img {
   width: 100%;
   height: 200px;
-  background-color: #d3d3d3;
-  border: 1px solid #d3d3d3; 
   object-fit: cover;
-  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
 }
 
 .product-description {
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin-bottom: 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 10px 0 5px;
+  color: #333;
+  font-family: 'Inria Serif', serif;
 }
 
 .product-price {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
+  color: #000;
+  font-family: 'Inria Serif', serif;
 }
+
 
 /* === DRAWERS AND OVERLAY === */
 
@@ -562,9 +571,6 @@ header {
   cursor: pointer;
 }
 
-#notification-content {
-  /* Styles for notification items will go here */
-}
 
 #overlay {
   position: fixed;
