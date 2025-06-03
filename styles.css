@@ -23,10 +23,16 @@ header {
 /* LOGO centered at the top */
 /* Updated Logo Style */
 .logo {
-  font-size: 28px;
-  font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
+  display: inline-block; /* or use 'flex' with justify-content: center */
+  max-width: 200px; /* Adjust this value to fit your logo size */
+  margin: 0 auto; /* Centers the logo horizontally */
+}
+.logo img {
+  max-width: 100%; /* Ensures the image scales within the container */
+  height: min-content;
+   /* Maintains aspect ratio */
 }
 .header-container {
   display: flex;
